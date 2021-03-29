@@ -1,6 +1,3 @@
-root:{
-  --speed: 4s;
-}
 html {
   height: 100%;
 }
@@ -63,12 +60,16 @@ body * {
   width: 150px;
   height: 150px;
   transform-style: preserve-3d;
-  transition: transform 0.5s ease 0s;
   transform: rotateX(-35deg) rotateY(45deg);
-  animation: spin var(--speed) 0.05s infinite;
+  /* animation: spin var(--speed) 0.05s infinite; */
   z-index: -1;
   transform-origin: center center;
 }
+
+.spin{
+  animation: spin var(--speed) 0.05s infinite;
+}
+
 
 .item > div {
   position: absolute;
@@ -100,35 +101,6 @@ body * {
   filter: brightness(1.85) saturate(1.5);
 }
 
-@keyframes spin {
-  0% {
-    transform: rotateX(-35deg) rotateY(45deg);
-  }
-  20% {
-    transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg);
-  }
-  30% {
-    transform: rotateX(-35deg) rotateY(45deg) rotateZ(115deg);
-  }
-  40% {
-    transform: rotateX(-35deg) rotateY(45deg) rotateZ(-10deg);
-  }
-  50% {
-    transform: rotateX(-35deg) rotateY(45deg) rotateZ(5deg);
-  }
-  60% {
-    transform: rotateX(-35deg) rotateY(45deg) rotateZ(-3deg);
-  }
-  70% {
-    transform: rotateX(-35deg) rotateY(45deg) rotateZ(2deg);
-  }
-  80% {
-    transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(-35deg) rotateY(45deg);
-  }
-}
   input[name="speed"] + label:before {
   content: "";
   border: 2px dotted #ccc;
@@ -228,3 +200,58 @@ input#s-medium:checked ~ .container {
 input#c-orange:checked ~ .container {
   filter: hue-rotate(0deg);
 }
+
+@keyframes spin {
+  0% {
+    transform: rotateX(-35deg) rotateY(45deg);
+  }
+  20% {
+    transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg);
+  }
+  30% {
+    transform: rotateX(-35deg) rotateY(45deg) rotateZ(115deg);
+  }
+  40% {
+    transform: rotateX(-35deg) rotateY(45deg) rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateX(-35deg) rotateY(45deg) rotateZ(5deg);
+  }
+  60% {
+    transform: rotateX(-35deg) rotateY(45deg) rotateZ(-3deg);
+  }
+  70% {
+    transform: rotateX(-35deg) rotateY(45deg) rotateZ(2deg);
+  }
+  80% {
+    transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(-35deg) rotateY(45deg);
+  }
+}
+
+
+
+.up{
+  margin-bottom: 160px;
+  animation: up 2s 1;
+}
+.down{
+  margin-bottom: 0;
+  animation: down 2s 1;
+}
+
+@keyframes up {
+  from {margin-bottom: 0}
+  to {margin-bottom: 160px}
+}
+
+@keyframes down {
+  from {margin-bottom: 160px}
+  to {margin-bottom: 0}
+}
+
+
+
+
