@@ -14,11 +14,12 @@
 
 		<input type="radio" name="color" id="cOrange" checked><label for="cOrange"><span>Orange</span></label>
 
-      <input type="radio" name="speed" id="s-medium" checked><label for="s-medium"><span>Medium</span></label>
+    <input type="radio" name="speed" id="s-medium" checked><label for="s-medium"><span>Medium</span></label>
+    <input type="radio" name="spinOnOff" id="spin" onclick="spin()"><label for="spin"><span>Spin</span></label>
 
       <div class="container">
 
-        <div id="item1" class="item down" onclick="move()">
+        <div id="item" class="item" onclick="move()">
           <div></div>
           <div></div>
           <div></div>
@@ -26,7 +27,7 @@
           <div></div>
           <div></div>
         </div>
-        <div id="item2" class="item" onclick="spin()">
+        <div id="item" class="item" onclick="move()">
           <div></div>
           <div></div>
           <div></div>
@@ -38,7 +39,6 @@
 
 
         <script src="script.js"></script>
-        <!-- https://api.jquery.com/toggle/ -->
         <!-- div.classList.replace("foo", "bar"); -->
   </body>
 </html>

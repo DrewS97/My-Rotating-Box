@@ -61,6 +61,7 @@ body * {
   height: 150px;
   transform-style: preserve-3d;
   transform: rotateX(-35deg) rotateY(45deg);
+  transition: transform 0.5s ease 0s;
   /* animation: spin var(--speed) 0.05s infinite; */
   z-index: -1;
   transform-origin: center center;
@@ -69,7 +70,6 @@ body * {
 .spin{
   animation: spin var(--speed) 0.05s infinite;
 }
-
 
 .item > div {
   position: absolute;
@@ -81,10 +81,28 @@ body * {
   box-shadow: 0 0 5px -3px #fff inset;
 }
 
-.item > div:nth-child(2){
-  transform: rotate(90) translate3d(0px, 7px, 7px);
+.item > div:nth-child(2) {
+  transform: rotateX(90deg) translate3d(0px, 7px, 7px);
+  background: #ffa116;
+  height: 12px;
+}
+.item > div:nth-child(3) {
+  transform: rotateX(0deg) translate3d(0, 0, 14px);
+}
+.item > div:nth-child(4) {
+  transform: rotateX(270deg) translate3d(0px, -7px, 143px);
   background: #ffa116;
   height: 14px;
+}
+.item > div:nth-child(5) {
+  transform: rotateY(90deg) translate3d(-7px, 0, 143px);
+  background: #e04b00;
+  width: 14px !important;
+}
+.item > div:nth-child(6) {
+  transform: rotateY(-90deg) translate3d(7px, 0, 7px);
+  background: #e04b00;
+  width: 14px !important;
 }
 
 .item:nth-child(2) {
@@ -161,6 +179,10 @@ input#c-orange:checked + label {
   box-shadow: 0 0 10px 0px #ff5500, 1px 1px 3px 1px #ffffffaa inset;
 }
 
+label[for="spin"] {
+  right: 1em;
+}
+
 label[for="c-orange"] {
   left: 1em;
   background: #ff5500;
@@ -231,8 +253,6 @@ input#c-orange:checked ~ .container {
   }
 }
 
-
-
 .up{
   margin-bottom: 160px;
   animation: up 2s 1;
@@ -248,9 +268,10 @@ input#c-orange:checked ~ .container {
 }
 
 @keyframes down {
-  from {margin-bottom: 160px}
-  to {margin-bottom: 0}
+  from {margin-top: 160px}
+  to {margin-top: 0}
 }
+
 
 
 
