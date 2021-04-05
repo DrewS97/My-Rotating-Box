@@ -8,14 +8,14 @@ function move() {
   let clickedBox = event.currentTarget;
   boxList.forEach((b) => { 
     if (b == clickedBox) {
-      let position = 1;
-      if (position == 1){
-        b.classList.toggle("up");
-        position *= -1;
+      if (b.classList.contains("up") == true){
+        b.classList.replace("up", "down");
+      }
+      else if (b.classList.contains("down") == true) {
+        b.classList.replace("down", "up");
       }
       else {
-        b.classList.toggle("down");
-        position *= -1;
+        b.classList.add("up")
       }
     }
     console.log(b.classList);
