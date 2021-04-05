@@ -5,9 +5,19 @@ boxList.forEach((b) => {
 });
 
 function move() {
+  let clickedBox = event.currentTarget;
   boxList.forEach((b) => { 
-    b.classList.toggle("up");
-    b.classList.toggle("down");
+    if (b == clickedBox) {
+      let position = 1;
+      if (position == 1){
+        b.classList.toggle("up");
+        position *= -1;
+      }
+      else {
+        b.classList.toggle("down");
+        position *= -1;
+      }
+    }
     console.log(b.classList);
   });
 }
