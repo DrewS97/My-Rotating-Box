@@ -15,9 +15,10 @@ function move() {
         b.classList.replace("down", "up");
       }
       else {
-        b.classList.add("up")
+        b.classList.add("up");
       }
     }
+    b.classList.remove("spin");
     console.log(b.classList);
   });
 }

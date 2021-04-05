@@ -131,7 +131,7 @@ body * {
   filter: brightness(1.8) saturate(1.5);
 }
 
-  input[name="speed"] + label:before {
+input[name="speed"] + label:before {
   content: "";
   border: 2px dotted #ccc;
   width: 1em;
@@ -276,10 +276,10 @@ input#c-orange:checked ~ .container {
 
 @keyframes up {
   from {top: 0}
-  to {top: -100px}
+  to {top: -160px}
 }
 
 @keyframes down {
-  from {margin-top: -100px}
+  from {margin-top: -160px}
   to {margin-top: 0}
 }
